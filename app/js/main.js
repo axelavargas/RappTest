@@ -4,7 +4,7 @@ var app = angular.module('tweetsApp', ['ngSanitize']);
 
 //app initializer, show splash and change to ship view
 app.run(function(){
-	$('.splash').fadeOut(1200, function() {
+	$('.splash').fadeOut(4000, function() {
         $('.search-tweets, .moon').fadeIn();
     });
 });
