@@ -15,7 +15,7 @@ gulp.task('styles', function() {
             paths: [path.join(__dirname, 'app', 'assets', 'less')]
         }))
         .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-        .pipe(minifyCSS())
+        //.pipe(minifyCSS())
         .pipe(gulp.dest('./app/css'))
         .pipe(livereload(server));
 });
