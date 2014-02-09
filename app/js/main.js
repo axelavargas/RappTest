@@ -4,7 +4,7 @@ var app = angular.module('tweetsApp', ['ngSanitize']);
 
 //app initializer, show splash and change to ship view
 app.run(function(){
-	$('.splash').fadeOut(4000, function() {
+	$('.splash').fadeOut(0, function() {
         $('.search-tweets, .moon').fadeIn();
     });
 });
@@ -15,12 +15,11 @@ app.controller('SearchTweetsCtrl', function($scope, searchTweetsService, $timeou
         //get tweets from service
         searchTweetsService.get($scope.query, $scope).then(function(data, err) {
             //iterate over results and hightlight
-            data.forEach(function(tweet) {
+            $.each(data, function(index, tweet) {
                 tweet.text = highlight(tweet.text, $scope.query.toLowerCase(), 'searchword')
             });
             //bind data to view
             $scope.tweets = data;
-
             //render animations
             searchAnimations();
         });

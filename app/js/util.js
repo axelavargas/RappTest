@@ -5,7 +5,7 @@
 function highlight(content, what, spanClass) {
     what = what.replace(/(\r\n|\n|\r)/gm," ").split(' ');
     content = makeSortString(content);
-    what.forEach(function(v) {
+    $.each(what, function(i, v) {
         v = makeSortString(v);
         content = content.replace(new RegExp(v, 'ig'), '<span>' + v + '</span>');
     });
