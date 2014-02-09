@@ -52,7 +52,7 @@ app.factory('searchTweetsService', function($http, $q) {
             //query API
             $http({
                 method: 'GET',
-                url: 'http://young-spire-7685.herokuapp.com/twapi?q="' + query + '"'
+                url: '/twapi?q="' + query + '"'
             }).
             //resolve promise with data
             success(function(data, status, headers, config) {
