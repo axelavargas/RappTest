@@ -1,0 +1,21 @@
+{
+  "name": "base",
+  "version": "0.0.0",
+  "authors": [
+    "Esteban Beltran <sergies@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularfire": "~0.6.0",
+    "angular-ui-router": "https://github.com/angular-ui/ui-router.git#~0.2.8"
+  }
+}
