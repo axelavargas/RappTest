@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css" />
+    <!--[if lt IE 9]>
+    <script src="js/vendors/html5.min.js"></script>
+    <script src="js/vendors/selectivizr-min.js"></script>
+    <script src="js/vendors/ie9.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+</head>
+
+<body ng-app="tweetsApp" ng-controller="SearchTweetsCtrl">
+    <div class="trees"><img src="/img/trees.png" alt=""></div>
+    <div class="moon"><img src="/img/moon.png" alt=""></div>
+    <div class="he ader-container">
+        <header class="wrapper clearfix">
+
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+            <div class="message message-show splash"></div>
+            <div class="search-tweets message-show">
+                <div class="search">
+                    <div class="burble-information">
+                        <p>Escribe una frase y encuentra tweets que contengan alguna de las palabras que la conforman.</p>
+                    </div>
+                    <div class="form-search">
+                        <form ng-submit="search()">
+                            <textarea placeholder="Escribe tu frase y buscaremos en universo infinito del internet" name="text" id="" cols="30" rows="10" ng-model="query"></textarea>
+                            <button>Buscar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="light">
+                        <img src="/img/light.png" alt="">
+                    </div>
+            </div>
+            <div id="tweets-container" class="tweets" ng-show="tweets">
+                <div ng-repeat="tweet in tweets" ng-bind-html="tweet.text"></div>
+            </div>
+        </div>
+        <!-- #main -->
+    </div>
+    <!-- #main-container -->
+
+    <div class="footer-container">
+        <div id="logo">
+            <img src="/img/rapp.png" alt="">
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
