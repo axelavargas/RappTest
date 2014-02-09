@@ -1,3 +1,5 @@
+'use strict';
+
 //takes a text, a bunch of words and
 //add an span tag around the matches
 function highlight(content, what, spanClass) {
